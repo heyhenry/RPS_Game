@@ -24,33 +24,44 @@
                 
             }
 
+            let wins = 0
+            let losses = 0
+            let draws = 0
+
             function playRound(playerSelection, computerSelection) {
                 
                 if (playerSelection == computerSelection) {
+                    draws = +draws + + 1
                     return "You guys drawed!"
                 }
 
                 else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+                    wins = +wins + +1
                     return "Rock beats Scissors. You win!"
                 }
 
                 else if (playerSelection == "Rock" && computerSelection == "Paper") {
+                    losses = +losses + +1
                     return "Rock loses to Paper. Computer wins!"
                 }
 
                 else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+                    wins = +wins + +1
                     return "Scissor beats Paper. You win!"
                 }
 
                 else if (playerSelection == "Scissors" & computerSelection == "Rock") {
+                    losses = +losses + +1
                     return "Scissor loses to Rock. Computer wins!"
                 }
 
                 else if (playerSelection == "Paper" && computerSelection =="Scissors") {
+                    losses = +losses + +1
                     return "Paper loses to Scissors. Computer wins!"
                 }
 
                 else if (playerSelection == "Paper" && computerSelection == "Rock") {
+                    wins = +wins + +1
                     return "Paper beats Rock. You win!"
                 }
 
@@ -59,10 +70,15 @@
                 }
 
             }
+
+            // Getter function
+            function scoreCounter() {
+                return window.alert("Results: \nRounds Won: " + wins + "\nRounds Lost: " + losses + "\nRounds Drawn: " + draws)
+            }
         
             function game() {
                 
-                let rounds = 0;
+                let rounds = 0
                 
                 window.alert("Welcome to the RPS Game!")
 
@@ -77,8 +93,9 @@
 
                 }
 
-                
-                return window.alert("5 rounds of RPS have conlcuded. Thanks for playing!")
+                window.alert(scoreCounter());
+                window.alert("5 rounds of RPS have conlcuded. Thanks for playing!")
+               
             }
 
         </script>
