@@ -75,7 +75,7 @@
 
             }
 
-            const playerSelection = "Rock"
+            // const playerSelection = "Rock"
             const computerSelection = computerPlay()
             // console.log(playRound(playerSelection, computerSelection))
         
@@ -84,6 +84,8 @@
                 let rounds = 0;
                 
                 while (rounds < 5) {
+
+                    const playerSelection = prompt("Rock, Paper, Scissors.");
 
                     console.log(playRound(playerSelection, computerSelection));
                     rounds++;
