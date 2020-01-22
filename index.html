@@ -86,10 +86,15 @@
                 while (rounds < 5) {
 
                     const playerSelection = prompt("Rock, Paper, Scissors.");
+                    
+                    // document.getElementById("demo").innerHTML = playRound(playerSelection, computerSelection);
+                    games = playRound(playerSelection, computerSelection);
+                    window.alert(games);
+                    rounds++; 
 
-                    console.log(playRound(playerSelection, computerSelection));
-                    rounds++;
                 }
+
+                return window.alert("5 rounds of RPS have conlcuded. Thanks for playing!")
             }
 
         </script>
