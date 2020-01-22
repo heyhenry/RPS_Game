@@ -25,22 +25,7 @@
             }
 
             function playRound(playerSelection, computerSelection) {
-                // if (playerSelection && computerSelection == "Paper") {
-                //     return "You chose " + playerSelection + ". Computer chose " + computerSelection + ". You guys drawed!"
-                // }
-
-                // else if (playerSelection && computerSelection == "Rock") {
-                //     return "You chose " + playerSelection + ". Computer chose " + computerSelection + ". You guys drawed!"
-                // }
-
-                // else if (playerSelection && computerSelection == "Scissors") {
-                //     return "You chose " + playerSelection + ". Computer chose " + computerSelection + ". You guys drawed!"
-                // }
-
-                // else if (playerSelection ) {
-
-                // }
-
+                
                 if (playerSelection == computerSelection) {
                     return "You guys drawed!"
                 }
@@ -70,30 +55,29 @@
                 }
 
                 else {
-                    return "Error - Something went wrong with your code or user input."
+                    return "Not a valid input!"
                 }
 
             }
-
-            // const playerSelection = "Rock"
-            const computerSelection = computerPlay()
-            // console.log(playRound(playerSelection, computerSelection))
         
             function game() {
                 
                 let rounds = 0;
                 
+                window.alert("Welcome to the RPS Game!")
+
                 while (rounds < 5) {
 
                     const playerSelection = prompt("Rock, Paper, Scissors.");
-                    
-                    // document.getElementById("demo").innerHTML = playRound(playerSelection, computerSelection);
+                    const computerSelection = computerPlay();
+
                     games = playRound(playerSelection, computerSelection);
                     window.alert(games);
                     rounds++; 
 
                 }
 
+                
                 return window.alert("5 rounds of RPS have conlcuded. Thanks for playing!")
             }
 
