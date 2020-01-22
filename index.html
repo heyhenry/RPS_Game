@@ -5,7 +5,24 @@
     </head>
     <body>
         <script>
+            
+            function computerPlay() {
+                let computerChoiceList = ["Rock", "Paper", "Scissors"];
+                let computerChoice = Math.floor(Math.random() * computerChoiceList.length);
+                
+                if (computerChoice == 0) {
+                    computerChoice = "Rock"
+                }
 
+                if (computerChoice == 1) {
+                    computerChoice = "Paper"
+                }
+
+                else {
+                    computerChoice = "Scissors"
+                }
+                
+            }
 
         </script>
     </body>
