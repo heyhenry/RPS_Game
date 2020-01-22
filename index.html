@@ -70,16 +70,25 @@
                 }
 
                 else {
-                    return "WTF?"
+                    return "Error - Something went wrong with your code or user input."
                 }
 
             }
 
             const playerSelection = "Rock"
             const computerSelection = computerPlay()
-            console.log(playRound(playerSelection, computerSelection))
+            // console.log(playRound(playerSelection, computerSelection))
         
+            function game() {
+                
+                let rounds = 0;
+                
+                while (rounds < 5) {
 
+                    console.log(playRound(playerSelection, computerSelection));
+                    rounds++;
+                }
+            }
 
         </script>
     </body>
