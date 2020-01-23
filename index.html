@@ -41,37 +41,37 @@
                 
                 while (roundsPlayed < rounds)
 
-                    if (playerSelection == computerSelection) {
+                    if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
                         draws = +draws + + 1
                         return "You guys drawed!"
                     }
 
-                    else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+                    else if (playerSelection.toLowerCase() == "Rock".toLowerCase() && computerSelection.toLowerCase() == "Scissors".toLowerCase()) {
                         wins = +wins + +1
                         return "Rock beats Scissors. You win!"
                     }
 
-                    else if (playerSelection == "Rock" && computerSelection == "Paper") {
+                    else if (playerSelection.toLowerCase() == "Rock".toLowerCase() && computerSelection.toLowerCase() == "Paper".toLowerCase()) {
                         losses = +losses + +1
                         return "Rock loses to Paper. Computer wins!"
                     }
 
-                    else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+                    else if (playerSelection.toLowerCase() == "Scissors".toLowerCase() && computerSelection.toLowerCase() == "Paper".toLowerCase()) {
                         wins = +wins + +1
                         return "Scissor beats Paper. You win!"
                     }
 
-                    else if (playerSelection == "Scissors" & computerSelection == "Rock") {
+                    else if (playerSelection.toLowerCase() == "Scissors".toLowerCase() & computerSelection.toLowerCase() == "Rock".toLowerCase()) {
                         losses = +losses + +1
                         return "Scissor loses to Rock. Computer wins!"
                     }
 
-                    else if (playerSelection == "Paper" && computerSelection =="Scissors") {
+                    else if (playerSelection.toLowerCase() == "Paper".toLowerCase() && computerSelection.toLowerCase() =="Scissors".toLowerCase()) {
                         losses = +losses + +1
                         return "Paper loses to Scissors. Computer wins!"
                     }
 
-                    else if (playerSelection == "Paper" && computerSelection == "Rock") {
+                    else if (playerSelection.toLowerCase() == "Paper".toLowerCase() && computerSelection.toLowerCase() == "Rock".toLowerCase()) {
                         wins = +wins + +1
                         return "Paper beats Rock. You win!"
                     }
@@ -87,7 +87,7 @@
 
                 while (roundsPlayed < rounds) {
 
-                    const playerSelection = prompt("Rock, Paper, Scissors.");
+                    playerSelection = prompt("Rock, Paper, Scissors.");
                     const computerSelection = computerPlay();
 
                     games = playRound(playerSelection, computerSelection);
