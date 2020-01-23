@@ -4,7 +4,10 @@
         <title>RPS Game</title>
     </head>
     <body>
+
         <script>
+
+            // Randomizes computer's choice
 
             function computerPlay() {
                 let computerChoiceList = ["Rock", "Paper", "Scissors"];
@@ -29,6 +32,8 @@
             let draws = 0
             let roundsPlayed = 0
             let rounds = 0 
+
+            // Checks and tracks player's input against computer
 
             function playRound(playerSelection, computerSelection) {
                 
@@ -76,6 +81,8 @@
                 window.alert("Results: \nRounds Won: " + wins + "\nRounds Lost: " + losses + "\nRounds Drawn: " + draws)
             }
 
+            // Plays the game
+
             function game() {
                 
                 window.alert("Welcome to the RPS Game!")
@@ -95,6 +102,19 @@
                 scoreCounter();
                 window.alert(rounds + " rounds of RPS have conlcuded. Thanks for playing!")
 
+            }
+
+            // Resets the game function
+            
+            function actualGame() {
+                
+                wins = 0
+                losses = 0
+                draws = 0
+                rounds = 0
+                roundsPlayed = 0
+
+                game();
             }
 
         </script>
