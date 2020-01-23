@@ -27,74 +27,73 @@
             let wins = 0
             let losses = 0
             let draws = 0
+            let roundsPlayed = 0
+            let rounds = 0 
 
             function playRound(playerSelection, computerSelection) {
                 
-                if (playerSelection == computerSelection) {
-                    draws = +draws + + 1
-                    return "You guys drawed!"
-                }
+                while (roundsPlayed < rounds)
 
-                else if (playerSelection == "Rock" && computerSelection == "Scissors") {
-                    wins = +wins + +1
-                    return "Rock beats Scissors. You win!"
-                }
+                    if (playerSelection == computerSelection) {
+                        draws = +draws + + 1
+                        return "You guys drawed!"
+                    }
 
-                else if (playerSelection == "Rock" && computerSelection == "Paper") {
-                    losses = +losses + +1
-                    return "Rock loses to Paper. Computer wins!"
-                }
+                    else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+                        wins = +wins + +1
+                        return "Rock beats Scissors. You win!"
+                    }
 
-                else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-                    wins = +wins + +1
-                    return "Scissor beats Paper. You win!"
-                }
+                    else if (playerSelection == "Rock" && computerSelection == "Paper") {
+                        losses = +losses + +1
+                        return "Rock loses to Paper. Computer wins!"
+                    }
 
-                else if (playerSelection == "Scissors" & computerSelection == "Rock") {
-                    losses = +losses + +1
-                    return "Scissor loses to Rock. Computer wins!"
-                }
+                    else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+                        wins = +wins + +1
+                        return "Scissor beats Paper. You win!"
+                    }
 
-                else if (playerSelection == "Paper" && computerSelection =="Scissors") {
-                    losses = +losses + +1
-                    return "Paper loses to Scissors. Computer wins!"
-                }
+                    else if (playerSelection == "Scissors" & computerSelection == "Rock") {
+                        losses = +losses + +1
+                        return "Scissor loses to Rock. Computer wins!"
+                    }
 
-                else if (playerSelection == "Paper" && computerSelection == "Rock") {
-                    wins = +wins + +1
-                    return "Paper beats Rock. You win!"
-                }
+                    else if (playerSelection == "Paper" && computerSelection =="Scissors") {
+                        losses = +losses + +1
+                        return "Paper loses to Scissors. Computer wins!"
+                    }
 
-                else {
-                    return "Not a valid input"
-                }
+                    else if (playerSelection == "Paper" && computerSelection == "Rock") {
+                        wins = +wins + +1
+                        return "Paper beats Rock. You win!"
+                    }
 
             }
 
             function scoreCounter() {
-                
+
                 window.alert("Results: \nRounds Won: " + wins + "\nRounds Lost: " + losses + "\nRounds Drawn: " + draws)
             }
 
             function game() {
                 
-                let rounds = 0
-                
                 window.alert("Welcome to the RPS Game!")
+                rounds = prompt("How many rounds would you like to play?")
 
-                while (rounds < 5) {
+                while (roundsPlayed < rounds) {
 
                     const playerSelection = prompt("Rock, Paper, Scissors.");
                     const computerSelection = computerPlay();
 
                     games = playRound(playerSelection, computerSelection);
                     window.alert(games);
-                    rounds++; 
+                    roundsPlayed++; 
 
                 }
 
                 scoreCounter();
-                window.alert("5 rounds of RPS have conlcuded. Thanks for playing!")
+                window.alert(rounds + " rounds of RPS have conlcuded. Thanks for playing!")
 
             }
 
